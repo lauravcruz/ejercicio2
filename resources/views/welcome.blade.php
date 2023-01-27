@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    
+    <p>Mi primer estudiante es {{ $student }}</p>
 </body>
 
 </html>

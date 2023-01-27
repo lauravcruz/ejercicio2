@@ -1,6 +1,9 @@
 <?php
 
+use App\Http\Controllers\StudentController;
 use Illuminate\Support\Facades\Route;
+use App\Models\Student;
+use App\Models\Subject;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,7 +15,9 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+/*Route::get('/', function () {
+$student = Student::first();
+return $student->subjects;
+});*/
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [StudentController::class, 'inicio']);
